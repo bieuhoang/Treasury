@@ -1,0 +1,54 @@
+.dataTables_length {
+	float: left;
+}
+	.dataTables_length select {
+		width: 50px;
+	}
+.dataTables_filter {
+	float: right;
+}
+	.dataTables_filter input {
+		width: 450px;
+	}
+.dataTable {
+	clear: both;
+	float: none;
+}
+
+.dataTables_info {
+	float: left;
+}
+
+.dataTables_paginate {
+	float: right;
+}
+	.dataTables_paginate a {
+		float: left;
+		padding: 4px 12px;
+		line-height: 20px;
+		margin-right: 1px;
+		text-decoration: none;
+		background-color: #ffffff;
+		border: 1px solid #dddddd;
+	}
+
+	.dataTables_paginate .paginate_active,
+	.dataTables_paginate a:hover,
+	.dataTables_paginate a:focus {
+		background-color: #f5f5f5;
+	}
+
+	.dataTables_paginate a {
+		color: #999999;
+		cursor: default;
+	}
+
+.dataTables_wrapper {
+	float: none;
+	clear: both;
+	overflow: hidden;
+}
+
+.box {
+	box-shadow: 1px 1px 5px #AAAAAA;
+}
