@@ -299,4 +299,43 @@ class Promotion extends Admin_Controller
 			redirect('admin/promotion', 'refresh');
 		}
 	}
+public function pending(){
+		$id = $this->input->post('id');
+		$promotion = Model\Promotion::find($id);
+
+		if(is_null($promotion))
+		{
+			if($this->input->is_ajax_request())
+			{
+				$this->response->status(false)->message('Promotion is not exists or deleted.')->json();
+			}
+			else
+			{
+				show_404();
+				return;
+			}
+		}
+
+		$promotion->status = 2;
+
+		if($promotion->save())
+		{
+			$status = true;
+			$msg = 'change To Pending successfully';
+		}
+		else
+		{
+			$status = false;
+			$msg = 'Can not pending promotion at the moment';
+		}
+
+		if($this->input->is_ajax_request())
+		{
+			$this->response->status($status)->message($msg)->json();
+		}
+		else
+		{
+			redirect('admin/promotion', 'refresh');
+		}
+	}
 }
