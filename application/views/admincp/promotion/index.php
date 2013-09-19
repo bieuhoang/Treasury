@@ -29,21 +29,21 @@
 							<td><?php if($item->image != ''): ?><img src="<?php echo $item->image() ?>"/><?php endif ?></td>
 							<td><?php echo $item->date_from().' - '.$item->date_to() ?></td>
 							<td><?php echo $item->owner()->fullname() ?></td>
-							<td><?php echo $item->status() ?></td>
+							<td id='statusName<?php echo $item->id ?>'><?php echo $item->status() ?></td>
 							<td>
 								<?php if($item->id != 1): ?>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="remove" href="javascript:;" data-id="<?php echo $item->id ?>" title="Remove" data-toggle="tooltip"><span class="icon-remove"></span></a>
+									<a class="item-action" data-action="remove" href="javascript:;" data-id="<?php echo $item->id ?>" title="Remove" data-toggle="tooltip"><span class="icon-remove"></span></a>
 									<?php if($item->status == 1): ?>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="block" href="javascript:;" data-id="<?php echo $item->id ?>" title="Block" data-toggle="tooltip"><span class="icon-ok-circle"></span></a>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="pending" href="javascript:;" data-id="<?php echo $item->id ?>" title="Pending" data-toggle="tooltip"><span class="icon-time"></span></a>
+									<a class="item-action item-action<?php echo $item->id ?>" thisStatus="0"  nextStatus="<?php echo $item->status?>" changeTo="InActive" data-action="block" href="javascript:;" data-id="<?php echo $item->id ?>" title="Block" data-toggle="tooltip"><span class="icon-ok-circle"></span></a>
+									<a class="item-action item-action<?php echo $item->id ?>" thisStatus="2" nextStatus="<?php echo $item->status?>" changeTo="Pending" data-action="pending" href="javascript:;" data-id="<?php echo $item->id ?>" title="Pending" data-toggle="tooltip"><span class="icon-time"></span></a>
 									<?php endif ?>
 									<?php if($item->status == 0): ?>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="active" href="javascript:;" data-id="<?php echo $item->id ?>" title="Active" data-toggle="tooltip"><span class="icon-ban-circle"></span></a>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="pending" href="javascript:;" data-id="<?php echo $item->id ?>" title="Pending" data-toggle="tooltip"><span class="icon-time"></span></a>
+									<a class="item-action item-action<?php echo $item->id ?>" thisStatus="1" nextStatus="<?php echo $item->status?>" changeTo="Active" data-action="active" href="javascript:;" data-id="<?php echo $item->id ?>" title="Active" data-toggle="tooltip"><span class="icon-ban-circle"></span></a>
+									<a class="item-action item-action<?php echo $item->id ?>" thisStatus="2" nextStatus="<?php echo $item->status?>" changeTo="Pending" data-action="pending" href="javascript:;" data-id="<?php echo $item->id ?>" title="Pending" data-toggle="tooltip"><span class="icon-time"></span></a>
 									<?php endif ?>
 									<?php if($item->status == 2): ?>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="block" href="javascript:;" data-id="<?php echo $item->id ?>" title="Block" data-toggle="tooltip"><span class="icon-ok-circle"></span></a>
-									<a class="item-action" oldStatus="<?php echo $item->status ?>" oldStatusName="<?php echo $item->status() ?>" data-action="active" href="javascript:;" data-id="<?php echo $item->id ?>" title="Active" data-toggle="tooltip"><span class="icon-ban-circle"></span></a>
+									<a class="item-action item-action<?php echo $item->id ?>" thisStatus="0" nextStatus="<?php echo $item->status?>" changeTo="InActive" data-action="block" href="javascript:;" data-id="<?php echo $item->id ?>" title="Block" data-toggle="tooltip"><span class="icon-ok-circle"></span></a>
+									<a class="item-action item-action<?php echo $item->id ?>" thisStatus="1" nextStatus="<?php echo $item->status?>" changeTo="Active" data-action="active" href="javascript:;" data-id="<?php echo $item->id ?>" title="Active" data-toggle="tooltip"><span class="icon-ban-circle"></span></a>
 									<?php endif ?>
 								<?php endif ?>
 							</td>
