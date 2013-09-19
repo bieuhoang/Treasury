@@ -32,6 +32,7 @@ $(function() {
 				});
 			},
 			block: function(id, obj) {
+				console.log(obj);
 				cms.confirm('Are you sure you want to block this item?', function() {
 					cms.model('admin/promotion/block', {id: id}, function(resp) {
 						eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg)');
@@ -44,8 +45,22 @@ $(function() {
 				});
 			},
 			active: function(id, obj) {
+				console.log(obj);
 				cms.confirm('Are you sure you want to active this item?', function() {
 					cms.model('admin/promotion/active', {id: id}, function(resp) {
+						eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg)');
+						if(resp.status) {
+							$(obj).data('action', 'block')
+									.data('original-title', 'Block')
+									.html('<span class="icon-ok-circle"></span>');
+						}
+					});
+				});
+			},			
+			pending: function(id, obj) {
+				console.log(obj);				
+				cms.confirm('Are you sure you want to pending this item?', function() {
+					cms.model('admin/promotion/pending', {id: id}, function(resp) {
 						eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg)');
 						if(resp.status) {
 							$(obj).data('action', 'block')
@@ -59,4 +74,8 @@ $(function() {
 	});
 
 	cms.modules.run('promotion');
+	function addNewPromotionIcon(id, obj){
+		
+	}
+	
 });
