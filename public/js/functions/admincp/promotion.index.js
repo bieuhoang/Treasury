@@ -32,40 +32,31 @@ $(function() {
 				});
 			},
 			block: function(id, obj) {
-				console.log(obj);
 				cms.confirm('Are you sure you want to block this item?', function() {
 					cms.model('admin/promotion/block', {id: id}, function(resp) {
 						eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg)');
 						if(resp.status) {
-							$(obj).data('action', 'active')
-									.data('original-title', 'Active')
-									.html('<span class="icon-ban-circle"></span>');
+							addNewPromotionIcon(id, obj);
 						}
 					});
 				});
 			},
 			active: function(id, obj) {
-				console.log(obj);
 				cms.confirm('Are you sure you want to active this item?', function() {
 					cms.model('admin/promotion/active', {id: id}, function(resp) {
 						eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg)');
 						if(resp.status) {
-							$(obj).data('action', 'block')
-									.data('original-title', 'Block')
-									.html('<span class="icon-ok-circle"></span>');
+							addNewPromotionIcon(id, obj);	
 						}
 					});
 				});
 			},			
 			pending: function(id, obj) {
-				console.log(obj);				
 				cms.confirm('Are you sure you want to pending this item?', function() {
 					cms.model('admin/promotion/pending', {id: id}, function(resp) {
 						eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg)');
 						if(resp.status) {
-							$(obj).data('action', 'block')
-									.data('original-title', 'Block')
-									.html('<span class="icon-ok-circle"></span>');
+							addNewPromotionIcon(id, obj);						
 						}
 					});
 				});
@@ -74,8 +65,35 @@ $(function() {
 	});
 
 	cms.modules.run('promotion');
-	function addNewPromotionIcon(id, obj){
-		
-	}
-	
 });
+function updateStatusPromotion(){
+	
+}
+function addNewPromotionIcon(id, obj){	
+	var nextStatus = obj.getAttribute("nextStatus");
+	var nextStatusName = obj.getAttribute("changeTo");
+	var thisStatus = obj.getAttribute("thisStatus");
+	var actionStatus;
+	var titleStatus;
+	var iconClass;
+	var newStatus;
+	if(nextStatus ==0){
+		actionStatus = "block";
+		titleStatus = "Block";
+		iconClass="icon-ok-circle";
+	}
+	if(nextStatus ==1){
+		actionStatus = "block";
+		titleStatus = "Active";
+		iconClass="icon-ban-circle";
+	}
+	if(nextStatus ==2){
+		actionStatus = "block";
+		titleStatus = "Pending";
+		iconClass="icon-time";
+	}
+	$('#statusName'+id).html(nextStatusName);
+	$(obj).data('action', actionStatus).attr('data-original-title', titleStatus).attr('thisStatus', nextStatus)
+	.html('<span class="'+iconClass+'"></span>');
+	$('.item-action'+id).attr('nextstatus', thisStatus);
+}
