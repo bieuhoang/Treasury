@@ -1201,17 +1201,16 @@ class User extends Site_Controller {
 	}
 
 	public function qr_code() {
-
-		//<img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=qrcode" title="Link to Google.com" />
-
 		if ( $this->input->post('qr_code') ) {
-			$qr_code = $this->input->post('qr_code');
-			$user	 = Model\User::find($this->current_user->id);
-			if ( $user && $qr_code !== '' ) {
-				$user->qr_code = $qr_code;
-				$user->save();
-				$this->current_user->qr_code = $qr_code;
-			}
+			$qr_code = $this->input->post('qr_code');		
+		}else{
+			$qr_code = site_url()."/profile";
+		}
+		$user	 = Model\User::find($this->current_user->id);
+		if ( $user && $qr_code !== '' ) {
+			$user->qr_code = $qr_code;
+			$user->save();
+			$this->current_user->qr_code = $qr_code;
 		}
 
 		$this->template
