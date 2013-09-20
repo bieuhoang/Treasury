@@ -25,6 +25,7 @@ $(function() {
 					cms.confirm('Are you sure you want to block this user?', function() {
 						cms.model('admin/user/block', {id: id}, function(resp) {
 							if(resp.status) {
+								$("#itemStatus"+id).html("Blocked");
 								$(obj).data('action', 'active')
 									.data('original-title', 'Active')
 									.html('<span class="icon-ok-circle"></span>');
@@ -39,6 +40,7 @@ $(function() {
 					cms.confirm('Are you sure you want to active this user?', function() {
 						cms.model('admin/user/active', {id: id}, function(resp) {
 							if(resp.status) {
+								$("#itemStatus"+id).html("Active");
 								$(obj).data('action', 'block')
 									.data('original-title', 'Block')
 									.html('<span class="icon-ban-circle"></span>');
