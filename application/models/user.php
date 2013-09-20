@@ -191,12 +191,12 @@ class User extends ORM {
 	public function status()
 	{
 		if($this->id == 1) return '';
-		switch($this->status)
+		switch($this->active)
 		{
 			case 0:
-				return 'X'; break;
+				return 'Blocked'; break;
 			case 1:
-				return 'V'; break;
+				return 'Active'; break;
 			default:
 				return ''; break;
 		}
