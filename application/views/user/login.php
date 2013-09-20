@@ -32,6 +32,7 @@
 						<input type="checkbox" name="remember"> Remember me
 					</label>
 					<button type="submit" class="btn btn-primary">Sign in</button>
+					<a href="register"><input type="button" class="btn btn-primary" value = "No account? Register here"></a>
 				</div>
 			</div>
 			<div class="control-group">
