@@ -238,9 +238,7 @@ class User extends Admin_Controller
 
 		if($id)
 		{
-			// $user = new User_Model();
-			$this->load->model('user_model', 'user');
-			if($this->user->get_by_id($id))
+			if(Model\User::find($id))
 			{
 				$return = $this->auth->activate($id);
 
@@ -259,7 +257,7 @@ class User extends Admin_Controller
 				{
 					if($this->input->is_ajax_request())
 					{
-						exit(json_encode(array('status' => false, 'msg' => 'Can not active this user at the moment. Please try again later.')));
+						exit(json_encode(array('status' => false, 'msg' => 'Can not block this user at the moment. Please try again later.')));
 					}
 					else
 					{
