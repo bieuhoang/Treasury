@@ -18,6 +18,7 @@
 							<th>Title</th>
 							<th>From</th>
 							<th>To</th>
+							<th>Public Pages</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
@@ -34,6 +35,7 @@
 									<td><?php echo anchor('user/edit_promotion/'.$item->id, $item->title) ?></td>
 									<td><?php echo $item->date_from ?></td>
 									<td><?php echo $item->date_to ?></td>
+									<td><a href="<?php echo $item->url() ?>" target="_blank" title="About this promotion ">DETAILS</a></td>
 									<td>
 										<a href="javascript:;" class="actions" data-action="delete" data-id="<?php echo $item->id ?>" data-toggle="tooltip" title="Remove"><span class="icon-remove"></span></a>
 										<a href="javascript:;" class="actions" data-action="edit" data-id="<?php echo $item->id ?>" data-toggle="tooltip" title="Edit"><span class="icon-edit"></span></a>
