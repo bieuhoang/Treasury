@@ -20,7 +20,7 @@
 						<div class="control-group">
 							<label for="" class="control-label">Username</label>
 							<div class="controls">
-								<input type="text" name="username" value="<?php echo set_value('username', isset($user) ? $user->username : '') ?>">
+								<input type="text" class="inputTxtForm" name="username" class="inputTxtForm" value="<?php echo set_value('username', isset($user) ? $user->username : '') ?>">
 							</div>
 						</div>
 
@@ -41,21 +41,21 @@
 						<div class="control-group">
 							<label for="" class="control-label">Email</label>
 							<div class="controls">
-								<input type="text" name="email" value="<?php echo set_value('email', isset($user) ? $user->email : '') ?>">
+								<input type="text" class="inputTxtForm" name="email" value="<?php echo set_value('email', isset($user) ? $user->email : '') ?>">
 							</div>
 						</div>
 						 
 						<div class="control-group">
 							<label for="" class="control-label">First name</label>
 							<div class="controls">
-								<input type="text" name="first_name" value="<?php echo set_value('first_name', isset($user) ? $user->first_name : '') ?>">
+								<input type="text" class="inputTxtForm" name="first_name" value="<?php echo set_value('first_name', isset($user) ? $user->first_name : '') ?>">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Last name</label>
 							<div class="controls">
-								<input type="text" name="last_name" value="<?php echo set_value('last_name', isset($user) ? $user->last_name : '') ?>">
+								<input type="text" class="inputTxtForm" name="last_name" value="<?php echo set_value('last_name', isset($user) ? $user->last_name : '') ?>">
 							</div>
 						</div>
 
@@ -73,14 +73,14 @@
 						<div class="control-group">
 							<label for="" class="control-label">Company</label>
 							<div class="controls">
-								<input type="text" name="company" value="<?php echo set_value('company', isset($user) ? $user->company : '') ?>">
+								<input type="text" class="inputTxtForm" name="company" value="<?php echo set_value('company', isset($user) ? $user->company : '') ?>">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Phone</label>
 							<div class="controls">
-								<input type="text" name="phone" value="<?php echo set_value('phone', isset($user) ? $user->phone : '') ?>">
+								<input type="text" class="inputTxtForm" name="phone" value="<?php echo set_value('phone', isset($user) ? $user->phone : '') ?>">
 							</div>
 						</div>
 
@@ -107,7 +107,7 @@
 								<div class="control-group">
 									<label for="" class="control-label">Username</label>
 									<div class="controls">
-										<input type="text" name="username" value="<?php echo set_value('username', isset($user) ? $user->username : '') ?>">
+										<input type="text" class="inputTxtForm" name="username" value="<?php echo set_value('username', isset($user) ? $user->username : '') ?>">
 									</div>
 								</div>
 
@@ -128,21 +128,21 @@
 								<div class="control-group">
 									<label for="" class="control-label">Email</label>
 									<div class="controls">
-										<input type="text" name="email" value="<?php echo set_value('email', isset($user) ? $user->email : '') ?>">
+										<input type="text" class="inputTxtForm" name="email" value="<?php echo set_value('email', isset($user) ? $user->email : '') ?>">
 									</div>
 								</div>
 								 
 								<div class="control-group">
 									<label for="" class="control-label">First name</label>
 									<div class="controls">
-										<input type="text" name="first_name" value="<?php echo set_value('first_name', isset($user) ? $user->first_name : '') ?>">
+										<input type="text" class="inputTxtForm" name="first_name" value="<?php echo set_value('first_name', isset($user) ? $user->first_name : '') ?>">
 									</div>
 								</div>
 
 								<div class="control-group">
 									<label for="" class="control-label">Last name</label>
 									<div class="controls">
-										<input type="text" name="last_name" value="<?php echo set_value('last_name', isset($user) ? $user->last_name : '') ?>">
+										<input type="text" class="inputTxtForm" name="last_name" value="<?php echo set_value('last_name', isset($user) ? $user->last_name : '') ?>">
 									</div>
 								</div>
 
@@ -160,14 +160,14 @@
 								<div class="control-group">
 									<label for="" class="control-label">Company</label>
 									<div class="controls">
-										<input type="text" name="company" value="<?php echo set_value('company', isset($user) ? $user->company : '') ?>">
+										<input type="text" class="inputTxtForm" name="company" value="<?php echo set_value('company', isset($user) ? $user->company : '') ?>">
 									</div>
 								</div>
 
 								<div class="control-group">
 									<label for="" class="control-label">Phone</label>
 									<div class="controls">
-										<input type="text" name="phone" value="<?php echo set_value('phone', isset($user) ? $user->phone : '') ?>">
+										<input type="text" class="inputTxtForm" name="phone" value="<?php echo set_value('phone', isset($user) ? $user->phone : '') ?>">
 									</div>
 								</div>
 
@@ -187,19 +187,19 @@
 								<div class="control-group">
 									<label for="" class="control-label">Address</label>
 									<div class="controls">
-										<input type="text" name="address" value="<?php echo isset($user) ? $user->address : '' ?>">
+										<input type="text" class="inputTxtForm" name="address" value="<?php echo isset($user) ? $user->address : '' ?>">
 									</div>
 								</div>
 								<div class="control-group">
 									<label for="" class="control-label">Zip</label>
 									<div class="controls">
-										<input type="text" name="zip" value="<?php echo isset($user) ? $user->zip : '' ?>">
+										<input type="text" class="inputTxtForm" name="zip" value="<?php echo isset($user) ? $user->zip : '' ?>">
 									</div>
 								</div>
 								<div class="control-group">
 									<label for="" class="control-label">City</label>
 									<div class="controls">
-										<input type="text" name="city" value="<?php echo isset($user) ? $user->city : '' ?>">
+										<input type="text" class="inputTxtForm" name="city" value="<?php echo isset($user) ? $user->city : '' ?>">
 									</div>
 								</div>
 								<div class="control-group">
@@ -259,42 +259,42 @@
 						<div class="control-group">
 							<label for="" class="control-label">Username</label>
 							<div class="controls">
-								<input type="text" name="username" value="<?php echo set_value('username', isset($user) ? $user->username : '') ?>">
+								<input type="text" class="inputTxtForm" name="username" value="<?php echo set_value('username', isset($user) ? $user->username : '') ?>">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Password</label>
 							<div class="controls">
-								<input type="password" name="password" value="" id="password-admin-user-form">
+								<input type="password" class="inputPwForm" name="password" value="" id="password-admin-user-form">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Retype password</label>
 							<div class="controls">
-								<input type="password" name="repassword" value="">
+								<input type="password"  class="inputPwForm" name="repassword" value="">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Email</label>
 							<div class="controls">
-								<input type="text" name="email" value="<?php echo set_value('email', isset($user) ? $user->email : '') ?>">
+								<input type="text" class="inputTxtForm" name="email" value="<?php echo set_value('email', isset($user) ? $user->email : '') ?>">
 							</div>
 						</div>
 						 
 						<div class="control-group">
 							<label for="" class="control-label">First name</label>
 							<div class="controls">
-								<input type="text" name="first_name" value="<?php echo set_value('first_name', isset($user) ? $user->first_name : '') ?>">
+								<input type="text" class="inputTxtForm" name="first_name" value="<?php echo set_value('first_name', isset($user) ? $user->first_name : '') ?>">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Last name</label>
 							<div class="controls">
-								<input type="text" name="last_name" value="<?php echo set_value('last_name', isset($user) ? $user->last_name : '') ?>">
+								<input type="text" class="inputTxtForm" name="last_name" value="<?php echo set_value('last_name', isset($user) ? $user->last_name : '') ?>">
 							</div>
 						</div>
 
@@ -312,14 +312,14 @@
 						<div class="control-group">
 							<label for="" class="control-label">Company</label>
 							<div class="controls">
-								<input type="text" name="company" value="<?php echo set_value('company', isset($user) ? $user->company : '') ?>">
+								<input type="text" class="inputTxtForm" name="company" value="<?php echo set_value('company', isset($user) ? $user->company : '') ?>">
 							</div>
 						</div>
 
 						<div class="control-group">
 							<label for="" class="control-label">Phone</label>
 							<div class="controls">
-								<input type="text" name="phone" value="<?php echo set_value('phone', isset($user) ? $user->phone : '') ?>">
+								<input type="text" class="inputTxtForm" name="phone" value="<?php echo set_value('phone', isset($user) ? $user->phone : '') ?>">
 							</div>
 						</div>
 

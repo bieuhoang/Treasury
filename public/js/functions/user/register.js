@@ -14,7 +14,7 @@ $(function() {
 						$('.datepicker').datepicker();
 					});
 
-					cms.form('#form-register', {
+					cms.form('#form-register',{
 						validate: {
 							rules: {
 								'form[username]': 'required',
@@ -24,16 +24,18 @@ $(function() {
 								},
 								'form[email]': {
 									required: true,
-									email: true
+									email: true,
 								}
 							}
 						},
 						beforeSubmit: function() {
 							$('button[type=submit]').text('Submiting...').attr('disabled', 'disabled');
-						},
+						},clearForm:false,resetForm:false,
 						success: function(resp) {
 							eval('cms.notif.'+(resp.status?'success':'error')+'(resp.msg);');
 							if(resp.status) {
+								$(".inputTxtForm").val("");
+								$(".inputPwForm").val("");
 								cms.notif.info('Redirecting to dashboard after 2s...');
 								if(typeof resp.redirect != 'undefined')
 								{
@@ -42,7 +44,7 @@ $(function() {
 									}, 2000);
 								}
 							}
-						}
+						},
 					});
 				}
 			}

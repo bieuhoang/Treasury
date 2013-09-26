@@ -39,7 +39,7 @@
 									<td>
 										<a href="javascript:;" class="actions" data-action="delete" data-id="<?php echo $item->id ?>" data-toggle="tooltip" title="Remove"><span class="icon-remove"></span></a>
 										<a href="javascript:;" class="actions" data-action="edit" data-id="<?php echo $item->id ?>" data-toggle="tooltip" title="Edit"><span class="icon-edit"></span></a>
-										<a href="javascript:;" class="actions" data-action="<?php echo $item->status ? 'block' : 'active' ?>" data-id="<?php echo $item->id ?>" data-toggle="tooltip" title="<?php echo $item->status ? 'Block' : 'Active' ?>"><span class="icon-<?php echo $item->status ? 'ban-circle' : 'random' ?>"></span></a>
+										<!--   <a href="javascript:;" class="actions" data-action="<?php echo $item->status ? 'block' : 'active' ?>" data-id="<?php echo $item->id ?>" data-toggle="tooltip" title="<?php echo $item->status ? 'Block' : 'Active' ?>"><span class="icon-<?php echo $item->status ? 'ban-circle' : 'random' ?>"></span></a> -->
 									</td>
 								</tr>
 							<?php endforeach ?>
