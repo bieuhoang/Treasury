@@ -5,7 +5,7 @@ $(function() {
 				isStore: null,
 				map: null,
 				geocoder: null,
-				forms: [],
+				forms: [],				
 				init: function() {
 					this.forms.push('#normal-user-form');
 					this.forms.push('#store-user-form');
@@ -127,9 +127,11 @@ $(function() {
 							success: function(label) {
 								label.parent().parent().removeClass('error');
 							}
-						},
+						},clearForm:false,resetForm:false,
 						success: function(resp) {
 							if(resp.status) {
+								$(".inputTxtForm").val("");
+								$(".inputPwForm").val("");					
 								cms.notif.success('Add new user successfully');
 							} else {
 								cms.notif.error(resp.msg);
