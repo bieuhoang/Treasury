@@ -64,7 +64,7 @@
 				<div class="control-group">
 					<label for="form-birthday" class="control-label">Birthday</label>
 					<div class="controls">
-						<input type="text" class="inputTxtForm" name="form[birthday]" class="datepicker" value="" placeholder="99/99/9999">
+						<input type="text" class="inputTxtForm" name="form[birthday]" class="datepicker" value="" placeholder="yyyy/mm/dd">
 					</div>
 				</div>
 

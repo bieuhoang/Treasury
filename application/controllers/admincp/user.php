@@ -52,6 +52,10 @@ class User extends Admin_Controller
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('repassword', 'Retype Password', 'required');
 		$this->form_validation->set_rules('group_id', 'Group', 'required');
+		$birthDayStr = $this->input->post('birthday', true);
+		if($birthDayStr != null){
+			$time = strtotime($birthDayStr);
+		}
 
 		if($this->form_validation->run() === TRUE)
 		{
@@ -84,7 +88,8 @@ class User extends Admin_Controller
 						'first_name' => $first_name,
 						'last_name' => $last_name,
 						'company' => $company,
-						'phone' => $phone
+						'phone' => $phone,
+						'birthday' => $time,
 					);
 
 					$profiles['address'] = $this->input->post('address') ? $this->input->post('address') : '';
