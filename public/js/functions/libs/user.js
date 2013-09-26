@@ -188,7 +188,7 @@ cms.extend(cms, {
 												('<div class="control-group">')
 													('<label for="form-birthday" class="control-label">Birthday</label>')
 													('<div class="controls">')
-														('<input type="text" name="form[birthday]" class="datepicker" value="" placeholder="99/99/9999">')
+														('<input type="text" name="form[birthday]" class="datepicker" value="" placeholder="dd/mm/yyyy">')
 													('</div>')
 												('</div>')
 												('<div class="control-group">')
