@@ -12,21 +12,21 @@
 				<div class="control-group">
 					<label for="form-username" class="control-label">Username</label>
 					<div class="controls">
-						<input type="text" name="form[username]" value="" placeholder="Username">
+						<input type="text" class="inputTxtForm" name="form[username]" value="" placeholder="Username">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label for="form-password" class="control-label">Password</label>
 					<div class="controls">
-						<input type="password" id="password" name="form[password]" value="" placeholder="Password">
+						<input type="password" class="inputPwForm" id="password" name="form[password]" value="" placeholder="Password">
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label for="form-re-password" class="control-label">Retype password</label>
+					<label for="form-re-password"  class="control-label">Retype password</label>
 					<div class="controls">
-						<input type="password" name="form[repassword]" value="" placeholder="Retype password">
+						<input type="password" class="inputPwForm" name="form[repassword]" value="" placeholder="Retype password">
 					</div>
 				</div>
 
@@ -40,14 +40,14 @@
 				<div class="control-group">
 					<label for="form-first_name" class="control-label">First name</label>
 					<div class="controls">
-						<input type="text" name="form[first_name]" value="" placeholder="First name">
+						<input type="text" class="inputTxtForm" name="form[first_name]" value="" placeholder="First name">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label for="form-last_name" class="control-label">Last name</label>
 					<div class="controls">
-						<input type="text" name="form[last_name]" value="" placeholder="Last name">
+						<input type="text" class="inputTxtForm" name="form[last_name]" value="" placeholder="Last name">
 					</div>
 				</div>
 
@@ -64,21 +64,21 @@
 				<div class="control-group">
 					<label for="form-birthday" class="control-label">Birthday</label>
 					<div class="controls">
-						<input type="text" name="form[birthday]" class="datepicker" value="" placeholder="99/99/9999">
+						<input type="text" class="inputTxtForm" name="form[birthday]" class="datepicker" value="" placeholder="99/99/9999">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label for="form-company" class="control-label">Company</label>
 					<div class="controls">
-						<input type="text" name="form[company]" value="" placeholder="Company">
+						<input type="text" class="inputTxtForm" name="form[company]" value="" placeholder="Company">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label for="form-phone" class="control-label">Phone</label>
 					<div class="controls">
-						<input type="text" name="form[phone]" value="" placeholder="Phone">
+						<input type="text" class="inputTxtForm" name="form[phone]" value="" placeholder="Phone">
 					</div>
 				</div>
 
