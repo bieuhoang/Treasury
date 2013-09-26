@@ -80,7 +80,9 @@
 						<label for="form-birthday" class="control-label">Birthday</label>
 						<div class="controls">
 							<input type="text" class="inputTxtForm" name="birthday"
-								class="datepicker" value="<?php echo set_value('birthday', isset($user) ? $user->birthday : '') ?>" placeholder="yyyy/mm/dd">
+								class="datepicker"
+								value="<?php echo set_value('birthday', isset($user) ? $user->birthday : '') ?>"
+								placeholder="yyyy/mm/dd">
 						</div>
 					</div>
 					<div class="control-group">
@@ -183,7 +185,9 @@
 								<label for="form-birthday" class="control-label">Birthday</label>
 								<div class="controls">
 									<input type="text" class="inputTxtForm" name="birthday"
-										class="datepicker" value="<?php echo set_value('birthday', isset($user) ? $user->birthday : '') ?>" placeholder="yyyy/mm/dd">
+										class="datepicker"
+										value="<?php echo set_value('birthday', isset($user) ? $user->birthday : '') ?>"
+										placeholder="yyyy/mm/dd">
 								</div>
 							</div>
 							<div class="control-group">
@@ -217,14 +221,7 @@
 						</div>
 						<div class="span6">
 
-							<div class="control-group">
-								<label for="" class="control-label">Address</label>
-								<div class="controls">
-									<input type="text" id="address" class="inputTxtForm"
-										name="address"
-										value="<?php echo isset($user) ? $user->address : '' ?>">
-								</div>
-							</div>
+
 							<div class="control-group">
 								<label for="" class="control-label">Zip</label>
 								<div class="controls">
@@ -250,7 +247,14 @@
 										</select>
 								</div>
 							</div>
-
+							<div class="control-group">
+								<label for="" class="control-label">Address</label>
+								<div class="controls">
+									<input type="text" id="address" class="inputTxtForm"
+										name="address"
+										value="<?php echo isset($user) ? $user->address : '' ?>">
+								</div>
+							</div>
 							<div class="control-group">
 								<label for="" class="control-label">Map</label>
 								<div class="controls">
@@ -361,7 +365,9 @@
 						<label for="form-birthday" class="control-label">Birthday</label>
 						<div class="controls">
 							<input type="text" class="inputTxtForm" name="birthday"
-								class="datepicker" value="<?php echo set_value('birthday', isset($user) ? $user->birthday : '') ?>" placeholder="yyyy/mm/dd">
+								class="datepicker"
+								value="<?php echo set_value('birthday', isset($user) ? $user->birthday : '') ?>"
+								placeholder="yyyy/mm/dd">
 						</div>
 					</div>
 					<div class="control-group">
